@@ -129,15 +129,36 @@ app.post('/sub_register',function(req,res){
 
 app.get("/book/:id",function(req,res){
   var id=req.params.id
+  con.query("SELECT * FROM places WHERE place_id=(?)",[id],function(err,result){
+    var m = JSON.parse(JSON.stringify(result))
+    res.render(__dirname + '/src/components/location.ejs', { n: m })
+  })
   
+});
+
+
+
+app.post("/cart",function(req,res){
+
+  var sd=req.body.sd
+  var ed=req.body.ed
+  var v=req.body.b
+  var l=1
+  con.query("INSERT INTO booking(place_id,start_date,end_date,email) VALUES (?,?,?,?);",[v,sd,ed,username],function(err,result)
+  { if(err) throw err;
+    console.log('inserted');
+
+  })
+
 })
 
-app.get("/cart",function(req,res){
-  var id=req.params.id
-  con.query("SELECT * FROM cart WHERE email=(?)",[username],function(err,result){
+app.get("/display",function(req,res){
+  
+  
+  con.query("SELECT * FROM places INNER JOIN booking ON places.place_id=booking.place_id WHERE booking.email=?",[username],function (error, result){
     
-		var l = JSON.parse(JSON.stringify(results))
-    console.log(l)
+		var l = JSON.parse(JSON.stringify(result))
+   
 
 		res.render(__dirname + '/views/emp_leave.ejs', { d: l })
   })
