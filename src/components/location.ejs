@@ -40,6 +40,7 @@
             color: white;
             border-radius: 4px;
             font-weight: bold;
+            margin-left: 75px;
         }
         .btn1:hover{
             background: white;
@@ -64,6 +65,9 @@ padding-left: 22px;
             font-style: italic;
             font-weight:bold ;
         }
+        .form-control {
+            margin-left: 40px;
+        }
        
     </style>
   </head>
@@ -82,13 +86,13 @@ padding-left: 22px;
 
             
             <div class="col-lg-9" >
-                <img src=""  class="img-fluid"  width="100%"  alt="">
+                <img src="https://37.media.tumblr.com/a91a20632e2baad25fd6c33b487f93ca/tumblr_n8kl8s9Pr01ri06y7o1_500.gifs"  class="img-fluid"  width="100%"  alt="">
             </div></div>
             <div class="col-lg-9 px-5 pt-5">
                 <h3 class ="font-weight-bold py-3"></h3>
                 <marquee direction="right" scrollamount="4" behavior="alternate" >
 
-                <h4><font color="Grey">
+                <h4><font color="black">
                     Book here
                 </font></h4></marquee>
                 <form>
@@ -96,31 +100,31 @@ padding-left: 22px;
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">Place</label>
-                            <input type="text" name='name' value='<%= n[0].name %>'placeholder="place name" class="form-control my-2 p-4">
+                            <input type="text" name='name' value='<%= n[0].name %>'placeholder="place name" class="form-control my-1 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">Location</label>
-                            <input type="text" name='address' value='<%= n[0].address %>'placeholder="place address" class="form-control my-2 p-4">
+                            <input type="text" name='address' value='<%= n[0].address %>'placeholder="place address" class="form-control my-1 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">Start-Date</label>
-                            <input type="date" name='sd' placeholder="Start-Date" class="form-control my-2 p-4">
+                            <input type="date" name='sd' placeholder="Start-Date" class="form-control my-1 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">End-Date</label>
-                            <input type="date" name='ed' placeholder="End-Date" class="form-control my-2 p-4">
+                            <input type="date" name='ed' placeholder="End-Date" class="form-control my-1 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">Amount</label>
-                            <input type="text" name='amount' value='<%= n[0].amount %>'placeholder="Amount" class="form-control my-2 p-4">
+                            <input type="text" name='amount' value='<%= n[0].amount %>'placeholder="Amount" class="form-control my-1 p-4">
                         </div>
                     </div>
                     <center>
@@ -131,7 +135,7 @@ padding-left: 22px;
                     <div class="form-row" align="center">
                         
                         <div class="col-lg-7">
-                            <button type="submit" name='b' value=<%= n[0].place_id %> class="btn1 mt-3 mb-5">Book Now</button>
+                            <button type="submit" name='b' value='<%= n[0].place_id %>' class="btn1 mt-3 mb-5">Book Now</button>
                         </div></div>
                     </div>
                 </center></div>

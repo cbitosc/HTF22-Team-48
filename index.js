@@ -134,7 +134,9 @@ d =
 
 
   
-
+app.get('/home',function(req,res){
+  res.sendFile(__dirname+"/home.html")
+})
 app.post('/login', function (req, res) {
   var v = req.body.d
 
@@ -220,7 +222,7 @@ app.get("/display", function (req, res) {
     console.log(l)
 
 
-    res.render(__dirname + '/src/components/card2.ejs', { k: l,g:d})
+    res.render(__dirname + '/src/components/cart_cards.ejs', { k: l,g:d})
   })
 })
 
