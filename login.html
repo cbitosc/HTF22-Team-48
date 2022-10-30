@@ -26,8 +26,12 @@
         img{
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
-            background-size: cover;
+            
             display: inline-block;
+            width:320px;
+            height: 290px;
+            border-radius: 50px;
+            padding-left: 20px;
         }
         .btn1{
             border: none;
@@ -44,39 +48,53 @@
             border: 1px solid;
             color: black;
         }
+        img:hover{
+            transform: scale(0.99);
+            opacity:70%;
+            
+        }
+        .edit{
+            padding-right: 190px;
+            padding-left: 190px;
+        }
+        
     </style>
   </head>
   <body>
     <form action="/sub_login" method="post">
     <section class="Form my-4 mx-5">
       <div class="container">
+        <div class="edit">
         <div class="row no-gutters">
-            <div class="col-lg-5">
-                <img src="p1.webp" class="img-fluid my-3 p-4 " alt="">
+            <div class="col-lg-5" style="padding-top:70px;">
+                
+                <img  src="https://csrbox.org/news/1614081082Rural%20India.jpg" class="" alt="">
             </div>
+            
             <div class="col-lg-7 px-5 pt-5">
                 <h3 class ="font-weight-bold py-3">Welcome</h3>
                 <h4>Log in to your account!</h4>
                 <form>
                     <div class="form-row">
-                        <div class="col-lg-7">
+                        <div class="col-lg-9">
                             <input name="email" type="email" placeholder="Email-Address" class="form-control my-2 p-4">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-lg-7">
+                        <div class="col-lg-9">
                             <input name="password" type="password" placeholder="****" class="form-control my-3 p-4">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-lg-7">
+                        <div class="col-lg-7" style="
+                        padding-left:40px">
                             <button type="submit" class="btn1 mt-3 mb-5">Login</button>
                         </div>
                     </div>
                     <a href="#">Forgot Password</a>
                     <p>Don't have an account? <a href="#">Register here</a></p>
                 </form>
-            </div>
+            </div></div>
         </div>
       </div>  
     </section>

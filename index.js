@@ -7,6 +7,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
+var sid='AC285fb3cafa4e4d1916ad872e86b96561'
+var auth_token='02bbdf90003b3e44dd62054e0411cd51'
+var twilio=require('twilio')(sid,auth_token)
 
 var username = ''
 app.get("/", function (req, res) {
@@ -142,7 +145,7 @@ app.post('/login', function (req, res) {
 
   console.log(v);
   if (v == "login") {
-    res.sendFile("D:/test/login.html")
+    res.sendFile(__dirname+"/login.html")
   }
   else if (v == "signup") {
     res.sendFile("D:/test/signup.html")
@@ -202,6 +205,9 @@ app.post("/cart", function (req, res) {
   var ed = req.body.ed
   var v = req.body.b
   var l = 1
+  
+ 
+
   con.query("INSERT INTO display(place_id,start_date,end_date,email) VALUES (?,?,?,?);", [v, sd, ed, username], function (err, result) {
     if (err) throw err;
     console.log('inserted');
