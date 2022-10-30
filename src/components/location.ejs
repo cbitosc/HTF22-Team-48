@@ -47,7 +47,7 @@
             color: black;
         }
         .edit{
-padding-left: 35px;
+padding-left: 22px;
         }
         
         .container{
@@ -92,31 +92,35 @@ padding-left: 35px;
                     Book here
                 </font></h4></marquee>
                 <form>
+
                     <div class="form-row">
                         <div class="col-lg-11">
-                            Place:<%= n[0].name %>
+                            <label class="left">Place</label>
+                            <input type="text" name='name' value='<%= n[0].name %>'placeholder="place name" class="form-control my-2 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
-                            Location:<%= n[0].address %>
+                            <label class="left">Location</label>
+                            <input type="text" name='address' value='<%= n[0].address %>'placeholder="place address" class="form-control my-2 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">Start-Date</label>
-                            <input type="date" name='sd' placeholder="Start-Date" class="form-control my-3 p-4">
+                            <input type="date" name='sd' placeholder="Start-Date" class="form-control my-2 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
                             <label class="left">End-Date</label>
-                            <input type="date" name='ed' placeholder="End-Date" class="form-control my-3 p-4">
+                            <input type="date" name='ed' placeholder="End-Date" class="form-control my-2 p-4">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-11">
-                            Amount:<%= n[0].amount %>
+                            <label class="left">Amount</label>
+                            <input type="text" name='amount' value='<%= n[0].amount %>'placeholder="Amount" class="form-control my-2 p-4">
                         </div>
                     </div>
                     <center>
